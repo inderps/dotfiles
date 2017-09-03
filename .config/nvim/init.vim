@@ -14,7 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-ruby/vim-ruby'
   Plug 'kassio/neoterm'
-  Plug 'thoughtbot/vim-rspec'
+  Plug 'elixir-lang/vim-elixir'
 call plug#end()
 
 colorscheme badwolf
@@ -73,14 +73,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:indentLine_color_term = 239
 let g:ctrlsf_ackprg = 'ag'
 
-" RSpec.vim mappings
-map <Leader>ra :call RunCurrentSpecFile()<CR>
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-
 "Git Highlighting
 hi DiffAdd guifg=NONE ctermfg=NONE guibg=#464632 ctermbg=238 gui=NONE cterm=NONE
 hi DiffChange guifg=NONE ctermfg=NONE guibg=#335261 ctermbg=239 gui=NONE cterm=NONE
 hi DiffDelete guifg=#f43753 ctermfg=203 guibg=#79313c ctermbg=237 gui=NONE cterm=NONE
 hi DiffText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=reverse cterm=reverse
 
+map !s :T bundle exec rspec %:<C-r>=line('.')<CR><CR>
+
+
+" Workspace Setup
+" ----------------
+" function! DefaultWorkspace()
+"     term git status
+"     sp
+" endfunction
+" command! -register DefaultWorkspace call DefaultWorkspace()

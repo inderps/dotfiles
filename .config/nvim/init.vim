@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-ruby/vim-ruby'
   Plug 'kassio/neoterm'
   Plug 'elixir-lang/vim-elixir'
+  Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 colorscheme badwolf

@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
   Plug 'tpope/vim-surround'
   Plug 'christoomey/vim-sort-motion'
+  Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 colorscheme badwolf

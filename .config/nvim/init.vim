@@ -15,6 +15,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-ruby/vim-ruby'
   Plug 'kassio/neoterm'
   Plug 'elixir-lang/vim-elixir'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  Plug 'tpope/vim-surround'
+  Plug 'christoomey/vim-sort-motion'
 call plug#end()
 
 colorscheme badwolf
@@ -35,8 +38,8 @@ syntax enable
   nnoremap <C-k> <C-w><C-k>
   nnoremap <C-l> <C-w><C-l>
   nnoremap <C-h> <C-w><C-h>
-  nnoremap <C-u> :tabprevious<CR>
-  nnoremap <C-i> :tabnext<CR>
+  " nnoremap <C-u> :tabprevious<CR>
+  " nnoremap <C-i> :tabnext<CR>
 
 "Text Search shortcuts
   nmap     <C-F>f <Plug>CtrlSFPrompt

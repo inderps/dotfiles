@@ -19,6 +19,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'christoomey/vim-sort-motion'
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'isRuslan/vim-es6'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 colorscheme badwolf
@@ -49,7 +52,12 @@ syntax enable
   nmap     <C-F>n <Plug>CtrlSFCwordPath
   nmap     <C-F>p <Plug>CtrlSFPwordPath
   nnoremap <C-F>o :CtrlSFOpen<CR>
-  
+
+
+"Switch buffers easily
+  nnoremap <Leader>b :ls<CR>:b<Space>
+
+
 "File search with new tab
   let g:fzf_layout = { 'window': '-tabnew' }
 
@@ -76,6 +84,7 @@ filetype indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:indentLine_color_term = 239
 let g:ctrlsf_ackprg = 'ag'
+let g:ctrlsf_winsize = '100%'
 
 "Git Highlighting
 hi DiffAdd guifg=NONE ctermfg=NONE guibg=#464632 ctermbg=238 gui=NONE cterm=NONE
@@ -85,7 +94,7 @@ hi DiffText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=reverse cterm=re
 
 map !s :T bundle exec rspec %:<C-r>=line('.')<CR><CR>
 
-
+:nnoremap <C-.> :set hlsearch!<CR>
 " Workspace Setup
 " ----------------
 " function! DefaultWorkspace()

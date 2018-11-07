@@ -71,6 +71,7 @@ set showmatch
 set foldenable
 set foldlevelstart=10 
 set foldnestmax=10
+set relativenumber!
 set number
 set list
 set shell=zsh

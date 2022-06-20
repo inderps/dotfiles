@@ -14,6 +14,9 @@ brew install direnv
 # for plugins into vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\n    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+brew install fzf
+
+
 brew install nvm
 git clone https://github.com/Sparragus/zsh-auto-nvm-use ~/.oh-my-zsh/custom/plugins/zsh-auto-nvm-use
 

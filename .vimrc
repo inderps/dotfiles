@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'dyng/ctrlsf.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'sheerun/vim-polyglot'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'tpope/vim-commentary'
   Plug 'pineapplegiant/spaceduck', { 'branch': 'dev' }
 call plug#end()
 
@@ -42,3 +44,12 @@ let g:airline_theme = 'spaceduck'
 
 let g:indentLine_color_term = 239
 
+"https://vi.stackexchange.com/questions/25086/vim-hangs-when-i-open-a-typescript-file
+set re=2
+
+"set linenumber
+set number
+
+"highlight search
+set hlsearch
+hi Search cterm=NONE ctermfg=black ctermbg=yellow

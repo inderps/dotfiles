@@ -99,7 +99,8 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+export FZF_DEFAULT_COMMAND='ag --nocolor --hidden -l --ignore node_modules -g ""'
+
 
 source /usr/local/opt/nvm/nvm.sh
 eval "$(direnv hook zsh)"

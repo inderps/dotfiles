@@ -9,7 +9,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'tpope/vim-commentary'
   Plug 'pineapplegiant/spaceduck', { 'branch': 'dev' }
+  Plug 'jparise/vim-graphql'
+  Plug 'vim-test/vim-test'
+  Plug 'github/copilot.vim'
 call plug#end()
+
+let mapleader = "," " map leader to comma
 
 "File search with new tab
   let g:fzf_layout = { 'window': '-tabnew' }
@@ -60,3 +65,7 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
+
+" /vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>

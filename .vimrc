@@ -8,10 +8,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'leafgarland/typescript-vim'
   Plug 'tpope/vim-commentary'
-  Plug 'pineapplegiant/spaceduck', { 'branch': 'dev' }
   Plug 'jparise/vim-graphql'
   Plug 'vim-test/vim-test'
   Plug 'github/copilot.vim'
+  Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 let mapleader = "," " map leader to comma
@@ -23,13 +23,13 @@ nnoremap <C-p> :FZF<CR>
 
 filetype indent on
 
-"Text Search shortcuts
-  nmap     <C-F>f <Plug>CtrlSFPrompt
-  vmap     <C-F>f <Plug>CtrlSFVwordPath
-  vmap     <C-F>F <Plug>CtrlSFVwordExec
-  nmap     <C-F>n <Plug>CtrlSFCwordPath
-  nmap     <C-F>p <Plug>CtrlSFPwordPath
-  nnoremap <C-F>o :CtrlSFOpen<CR>
+""Text Search shortcuts
+ nmap     <C-F>f <Plug>CtrlSFPrompt
+ vmap     <C-F>f <Plug>CtrlSFVwordPath
+ vmap     <C-F>F <Plug>CtrlSFVwordExec
+ nmap     <C-F>n <Plug>CtrlSFCwordPath
+ nmap     <C-F>p <Plug>CtrlSFPwordPath
+ nnoremap <C-F>o :CtrlSFOpen<CR>
 
 let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_winsize = '100%'
@@ -44,20 +44,23 @@ if exists('+termguicolors')
  set termguicolors
 endif
 
-colorscheme spaceduck
-let g:airline_theme = 'spaceduck'
+colorscheme monokai_pro
+set termguicolors
+highlight Normal guibg=black guifg=white
+
+" let g:airline_theme = 'solarized'
 
 let g:indentLine_color_term = 239
 
-"https://vi.stackexchange.com/questions/25086/vim-hangs-when-i-open-a-typescript-file
-set re=2
+""https://vi.stackexchange.com/questions/25086/vim-hangs-when-i-open-a-typescript-file
+"set re=2
 
-"set linenumber
+""set linenumber
 set number
 
-"highlight search
+""highlight search
 set hlsearch
-hi Search cterm=NONE ctermfg=black ctermbg=yellow
+"" hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 
 "change cursor in insert mode
@@ -66,6 +69,7 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
 
-" /vim-test
+"" /vim-test
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
+set tabstop=2

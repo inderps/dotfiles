@@ -26,18 +26,4 @@ git clone https://github.com/Sparragus/zsh-auto-nvm-use ~/.oh-my-zsh/custom/plug
 
 ### iTerm - going one word backwards and forwards
 
-* Preferences > Keys (or Preferences > Profiles > Keys)
-* Click the plus.
-* move forward one word
-```
-option+right
-send escape sequence
-f
-```
-
-* move back one word
-```
-option+left
-send escape sequence
-b
-```
+https://www.freecodecamp.org/news/jump-between-words-using-keyboard-shortcuts-in-iterm-fb1a70cecf79/

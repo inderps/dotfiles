@@ -27,3 +27,10 @@ git clone https://github.com/Sparragus/zsh-auto-nvm-use ~/.oh-my-zsh/custom/plug
 ### iTerm - going one word backwards and forwards
 
 https://www.freecodecamp.org/news/jump-between-words-using-keyboard-shortcuts-in-iterm-fb1a70cecf79/
+
+### Change cursor for different vim modes on warp terminal
+
+Add them in zshrc
+
+let &t_SI="\033[4 q" " start insert mode
+let &t_EI="\033[1 q" " end insert mode

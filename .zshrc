@@ -104,3 +104,6 @@ export FZF_DEFAULT_COMMAND='ag --nocolor --hidden -l --ignore node_modules -g ""
 
 source /usr/local/opt/nvm/nvm.sh
 eval "$(direnv hook zsh)"
+
+alias pull='git pull origin "$(git branch --show-current)"'
+alias push='git push origin "$(git branch --show-current)"'

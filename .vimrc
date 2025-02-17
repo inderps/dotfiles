@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-test/vim-test'
   Plug 'github/copilot.vim'
   Plug 'phanviet/vim-monokai-pro'
+  Plug '~/vim-pair-with-ai', {'name': 'vim-pair-with-ai'}
 call plug#end()
 
 let mapleader = "," " map leader to comma
@@ -68,6 +69,9 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
+
+let &t_SI="\033[4 q" " start insert mode
+let &t_EI="\033[1 q" " end insert mode
 
 "" /vim-test
 nmap <silent> <leader>t :TestNearest<CR>

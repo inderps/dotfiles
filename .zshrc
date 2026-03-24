@@ -154,3 +154,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
+# zoxide - smarter cd
+eval "$(zoxide init zsh)"
+
+# Aliases for better search tools
+alias find='fd'  # Use fd instead of find
+alias grep='rg'  # Use ripgrep instead of grep
+

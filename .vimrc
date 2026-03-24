@@ -47,7 +47,8 @@ endif
 
 colorscheme monokai_pro
 set termguicolors
-highlight Normal guibg=black guifg=white
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
 
 " let g:airline_theme = 'solarized'
 
